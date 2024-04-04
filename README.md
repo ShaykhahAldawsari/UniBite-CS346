@@ -16,7 +16,7 @@ We provide a filtering service for the newest and most modern cafes.
 * [JavaScript]
 * [JQuery]
 
-## Authors and Acknowledgements 
+## Authors 
 **Contributors/Developers:**           
 * [Shaykhah Aldawsari] (https://github.com/ShaykhahAldawsari)
 * [GhadyAlafisah] (https://github.com/GhadyAlafisah)
