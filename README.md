@@ -1,3 +1,5 @@
+![IMG_0572-removebg-preview](https://github.com/ShaykhahAldawsari/UniBite-CS346/assets/124717337/2e34320d-c094-4a8f-b914-dbdadbd9d0e1)
+
 # Web Development Project!
 
 #UNIBITE :
