@@ -21,5 +21,5 @@ We provide a filtering service for the newest and most modern cafes.
 ## Authors 
 **Contributors/Developers:**           
 * [Shaykhah Aldawsari] (https://github.com/ShaykhahAldawsari)
-* [GhadyAlafisah] (https://github.com/GhadyAlafisah)
+* [Ghady Alnafisah] (https://github.com/GhadyAlafisah)
 * [Adeem Turky] (https://github.com/adeemturky)
