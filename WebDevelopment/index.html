@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface</title>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        div{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        /*To add some transition*/
+        #cover{
+            position: relative;
+            margin: 0 auto;
+        }
+        #cover img{
+            max-width: 100%;
+             vertical-align: middle;
+            -webkit-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+        #cover img.top:hover{
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cover">
+    <img class="top" src="./images/UNIBITES LOGO.png" alt="Logo UNIBITES" height="500" >
+</div>
+
+</body>
+</html>
