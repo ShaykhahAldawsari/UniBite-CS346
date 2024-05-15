@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant manu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic Reset */
+    .header {
+     background-color: white;
+      position:relative;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      border-radius: 70px;
+      box-shadow: 4px 6px 6px rgba(0,0,0,0.1);
+      margin-left: 1em;
+      margin-right: 1em;
+      background-image: linear-gradient(300deg, #86a1f2 0%, #ebf1fa 70%);
+
+    }
+
+    /* Add responsiveness if needed */
+    @media (max-width: 768px) {
+      .cards-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .logo{
+        border-radius: 70px;
+    }
+
+    .header button{
+      background-color: transparent;
+      border: none;
+    }
+    .rate{
+        margin-left: 2.5em;
+        color: #8a8989;
+    }
+    div.header{
+      vertical-align: top;
+      display: grid;
+      text-align: left;
+    }
+
+    /* header contains shopping bag, websites logo and another info */
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="zone first">
+      <ul class="main-nav">
+        <li>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </a>
+    </li>
+        <li>
+          <img src="./images/UNIBITES LOGO.png" alt="UNIBITES logo" height="50" width="40" style="margin-left:12em; margin-top:-0.5em;">
+      </a>
+    </li>
+        <li class="push">
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+        </svg>
+      </a>
+    </li>
+      </ul>
+    </nav>
+  </header>
+<!-- main that contains restaurant's information thier contact number and 3d modeling -->
+  <main>
+   <nav>
+      <div class="header">
+        <img class="logo" src="./images/unnamed.png" alt="restaurant logo" height="150.5em" width="150.5em">
+        <h1 class="name" style="color:#8a8989; margin-left: 20px; font-size:35px"><br> MOON</h1><br>
+      
+        <div class="rate"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.2</div>
+
+        <div class="details">
+            <button type="button"onclick="alert('https://api.whatsapp.com/send?phone=966537226688')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2.0em" height="4.5em" fill="white" style=" margin-left: 27.0em; " class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+            </button>
+
+            <button >
+              <svg xmlns="http://www.w3.org/2000/svg" width="2.0em" height="4.5em" fill="white" style=" margin-left: 5.0em; " class="bi bi-globe-americas" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+              </svg>
+            </button>
+
+        </div>
+    </div>
+    </nav>
+
+    <section class="search-container">
+      <!-- Search bar and category filters -->
+      <input type="search" placeholder=" Search" >
+      <div class="categories">
+        <button><img src="./images/4053445_breakfast_hotcakes_kitchen_pancakes_restaurant_icon.png" alt="restuarnt icon"width="25" height="25" fill="currentColor"></button>
+        <button><img src="./images/4053443_fast_food_gastronomy_pizza_restaurant_icon.png" alt="food icon" width="25" height="25" fill="currentColor"></button>
+        <button><img src="./images/4053430_cupcake_dessert_food_gastronomy_sweet_icon.png" alt="pizza icon"width="25" height="25" fill="currentColor"></button>
+        <button style="color: #fffefe;"><img src="./images/4053429_beverage_coffee_cup_drink_food_icon.png" alt="cup of coffe" width="25" height="25"></button>
+      </div>
+    </section>
+    
+    <section class="cards-container">
+      <!-- Cards for each item -->
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.20.05 PM.png" alt="Moon Cafe">
+        <h2>Ice latte</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.2
+        </p>
+        <a href="#">See Details</a>
+      </div>
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.14.52 PM.png" alt="VOOM">
+        <h2>cappucino</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>5.0
+        </p>
+        <a href="#">See Details</a>
+      </div>
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.14.13 PM.png" alt="Artista">
+        <h2>Spanish latte</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.8
+        </p>
+        <a href="#">See Details</a>
+      </div>
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.13.29 PM.png" alt="Auntie Annes">
+        <h2>Black coffe</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.2
+        </p>
+        <a href="#">See Details</a>
+      </div>
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.26.05 PM.png" alt="Auntie Annes">
+        <h2>Turkish coffe</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.2
+        </p>
+        <a href="#">See Details</a>
+      </div>
+
+      <div class="card">
+        <img src="./images/Screenshot 2024-04-06 at 8.25.41 PM.png" alt="Auntie Annes">
+        <h2>Coffe mocha</h2>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1em" fill="rgb(227, 190, 105)" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>4.2
+        </p>
+        <a href="#">See Details</a>
+      </div>
+      <!-- Additional cards for items go here -->
+    </section>
+  </main>
+</body>
+</html>
