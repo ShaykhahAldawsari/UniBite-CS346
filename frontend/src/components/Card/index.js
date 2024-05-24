@@ -1,6 +1,18 @@
 import React from "react";
 
-const Card = ({ imageSrc, title, rating }) => {
+import { useNavigate } from "react-router-dom";
+
+const Card = ({ imageSrc, title, rating, location }) => {
+  const navigate = useNavigate();
+
+  const navigateToMenus = () => {
+    navigate("/menus", {
+      state: {
+        title: title,
+      },
+    });
+  };
+
   return (
     <div className="card">
       <img src={imageSrc} alt={title} />
@@ -18,7 +30,14 @@ const Card = ({ imageSrc, title, rating }) => {
         </svg>
         {rating}
       </p>
-      <a href="#">See Details</a>
+      <a
+        style={{
+          cursor: "pointer",
+        }}
+        onClick={navigateToMenus}
+      >
+        See Details
+      </a>
     </div>
   );
 };

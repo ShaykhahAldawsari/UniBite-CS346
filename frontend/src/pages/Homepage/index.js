@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../../restaurentModel.css";
 
-import drinks from "../../images/drinks2.png";
-import fries from "../../images/friesdemo.png";
 import burgers from "../../images/burdemo.png";
 import pancakes from "../../images/4053445_breakfast_hotcakes_kitchen_pancakes_restaurant_icon.png";
 import cupcake from "../../images/4053430_cupcake_dessert_food_gastronomy_sweet_icon.png";
 import pizza from "../../images/4053443_fast_food_gastronomy_pizza_restaurant_icon.png";
 import coffee from "../../images/4053443_fast_food_gastronomy_pizza_restaurant_icon.png";
 
-import unnamed from "../../images/unnamed.png";
 import OrderNowCard from "../../components/OrderNowCard";
 
 import useItems from "../../hooks/useItems";
@@ -83,7 +80,7 @@ const Homepage = () => {
                     <OrderNowCard
                       itemPrice={item?.itemprice ?? ""}
                       itemCals={item?.itemkcals ?? ""}
-                      imageSrc={item?.imageUrl ?? burgers}
+                      imageSrc={item?.itemIMG ?? burgers}
                       title={item?.itemname}
                       desc={"A delicious and fulfilling super snack"}
                     />

@@ -7,18 +7,18 @@ import Reciept from "../pages/Reciept";
 import OrderConfirmation from "../pages/OrderConfirmation";
 import Homepage from "../pages/Homepage";
 import Delivery from "../pages/Delivery";
-import Menu from "../pages/Menu";
+import Cafes from "../pages/Cafes";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <div className="m-4">
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Cafes />} />
 
           <Route path="/orders" element={<Orders />} />
           <Route path="/pickp-up-reciept" element={<PickUpReciept />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menus" element={<Homepage />} />
 
           <Route path="/reciept" element={<Reciept />} />
           <Route path="/delivery" element={<Delivery />} />
