@@ -41,6 +41,15 @@ here we draw our web pages flow chart:
 * https://icons.getbootstrap.com/
 * https://fontawesome.com/v5/icons/apple-pay?f=brands&s=solid&pc=%23ffffff
 
+## Presentation of our work
+* [https://www.canva.com/design/DAGFxwk7hTg/nrcw2lH_95ZbSwxgZp8DfQ/view?utm_content=DAGFxwk7hTg&utm_campaign=designshare&utm_medium=link&utm_source=editor] 
+
+## Future work
+*We are welling to add these features
+* [activate payment button] 
+* [GPS feature]
+
+
 ## Authors 
 **Contributors/Developers:**           
 * [Shaykhah Aldawsari] (https://github.com/ShaykhahAldawsari)
