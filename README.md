@@ -37,9 +37,9 @@ here we draw our web pages flow chart:
 ## Resources:
 * https://github.com/WebDevSimplified/Nodejs-Passport-Login
 * We got most of our icons from these websites and were free without watermark:
-* https://www.iconfinder.com/icons/285651/search_icon
-* https://icons.getbootstrap.com/
-* https://fontawesome.com/v5/icons/apple-pay?f=brands&s=solid&pc=%23ffffff
+* ICONFINDER: https://www.iconfinder.com/icons/285651/search_icon
+* BOOTSTRAP: https://icons.getbootstrap.com/
+* FONTAWESOME: https://fontawesome.com/v5/icons/apple-pay?f=brands&s=solid&pc=%23ffffff
 * FREEPIK: https://www.freepik.com/
 * CLEANPNG: https://www.cleanpng.com/
 * PNGTREE: https://pngtree.com/
@@ -52,6 +52,9 @@ here we draw our web pages flow chart:
 *We are welling to add these features
 * [activate payment button] 
 * [GPS feature]
+* [ADD MULTIPLE ITEMS]
+* [360 PHOTOS]
+
 
 
 ## Authors 
