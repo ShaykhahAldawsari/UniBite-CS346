@@ -3,13 +3,15 @@
 
 
 #UNIBITE :
-
-An electronic platform that allows female students of Imam University to get to know the university’s cafes with comprehensive information about them and a virtual reality of the inside of the cafe. We provide a pre-order and pick-up service from the cafe.
-In cooperation with Yamama Service within the university, there will be a delivery service
-
-Visitors' ratings box
-
-We provide a filtering service for the newest and most modern cafes.
+An online platform that allows female students at Imam
+University to explore the university's cafés with comprehensive
+information and a virtual tour of each café's interior. We provide
+a pre-order and pick-up service from the cafés. In collaboration
+with the Yamama service within the university, a delivery service
+will also be available.
+A section for visitor reviews.
+We offer a filtering service to highlight the newest and latest
+cafés.
 
 ## Flow Chart
 here we draw our web pages flow chart:
