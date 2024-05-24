@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../../images/UNIBITES LOGO.png"
+import logo from "../../images/UNIBITES LOGO.png";
 
 import { useAuthContext } from "../../contexts/authContext";
 
@@ -27,7 +27,12 @@ const Header = () => {
           id="navbarTogglerDemo01"
         >
           <div>
-            <div onClick={()=>{navigate("/")}} className="navbar-brand" >
+            <div
+              onClick={() => {
+                navigate("/");
+              }}
+              className="navbar-brand"
+            >
               UniBite
             </div>
           </div>
