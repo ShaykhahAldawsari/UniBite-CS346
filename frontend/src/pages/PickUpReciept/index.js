@@ -35,7 +35,7 @@ const PickUpReciept = () => {
                 <h4 className="orders">
                   <pre>
                     {item?.title ?? ""}
-                    {"  $"}
+                    {"  SAR"}
                     {item?.itemPrice ?? "" + "  "}
                   </pre>
                 </h4>
@@ -43,7 +43,7 @@ const PickUpReciept = () => {
             })}
 
           <h3 style={{ marginTop: "20px", marginBottom: "30px" }}>
-            <pre>{"sub total $ " + state?.total ?? ""}</pre>
+            <pre>{"sub total SAR " + state?.total ?? ""}</pre>
           </h3>
         </div>
         <div>

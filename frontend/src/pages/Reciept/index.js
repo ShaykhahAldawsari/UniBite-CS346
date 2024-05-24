@@ -33,7 +33,7 @@ const Reciept = () => {
                 <h4 className="orders">
                   <pre>
                     {item?.title ?? ""}
-                    {"  $"}
+                    {"  SAR"}
                     {item?.itemPrice ?? "" + "  "}
                   </pre>
                 </h4>
@@ -41,7 +41,7 @@ const Reciept = () => {
             })}
 
           <h3 style={{ marginTop: "20px", marginBottom: "30px" }}>
-            <pre>{"sub total $ " + state?.total ?? ""}</pre>
+            <pre>{"sub total SAR " + state?.total ?? ""}</pre>
           </h3>
         </div>
         <div>
@@ -57,12 +57,20 @@ const Reciept = () => {
             <tbody>
               <tr>
                 <td>
-                  <input
-                    type="button"
-                    className="btn btn-info"
-                    value="Contact Driver"
-                    style={{ width: "120px", fontSize: "14px" }}
-                  />
+                  <div
+                    onClick={() => {
+                      window.open(
+                        "https://chat.whatsapp.com/JYN5QMWixqgKaTGA38geTq"
+                      );
+                    }}
+                  >
+                    <input
+                      type="button"
+                      className="btn btn-info"
+                      value="Contact Driver"
+                      style={{ width: "120px", fontSize: "14px" }}
+                    />
+                  </div>
                 </td>
                 <td>
                   <div

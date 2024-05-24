@@ -17,7 +17,7 @@ const OrderNowCard = ({ imageSrc, title, desc, itemPrice, itemCals }) => {
       <div>
         <h4>{title}</h4>
         <p>{desc}</p>
-        <h3>{"$ " + itemPrice}</h3>
+        <h3>{"SAR " + itemPrice}</h3>
       </div>
       <button
         onClick={() => {

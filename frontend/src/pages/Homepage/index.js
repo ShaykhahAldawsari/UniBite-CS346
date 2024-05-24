@@ -70,6 +70,39 @@ const Homepage = () => {
         <Header />
       </header>
       <main>
+        <div
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            margin: "10px",
+            padding: "24px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <img src={state.imageSrc ?? ""} alt="" width={200} height={150} />
+          </div>
+
+          <div
+            style={{
+              marginLeft: "24px",
+            }}
+          >
+            <h1>{state?.title ?? ""}</h1>
+            <p
+              onClick={() => window.open(state?.location)}
+              style={{
+                fontSize: "18px",
+                color: "grey",
+                cursor: "pointer",
+              }}
+            >
+              location 🗺️
+            </p>
+          </div>
+        </div>
+
         <section class="search-container">
           <input
             type="search"
@@ -110,16 +143,6 @@ const Homepage = () => {
               style={{ color: "#fffefe" }}
             >
               <img src={drinks} alt="cup of coffe" width="25" height="25" />
-            </button>
-
-            <button onClick={() => window.open(state?.location)}>
-              <span
-                style={{
-                  color: "white",
-                }}
-              >
-                Location
-              </span>
             </button>
           </div>
         </section>

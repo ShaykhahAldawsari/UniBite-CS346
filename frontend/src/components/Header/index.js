@@ -28,7 +28,7 @@ const Header = () => {
         >
           <div>
             <div onClick={()=>{navigate("/")}} className="navbar-brand" >
-              Unibites
+              UniBite
             </div>
           </div>
 

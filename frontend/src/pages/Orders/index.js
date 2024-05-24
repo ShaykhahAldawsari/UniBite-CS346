@@ -59,7 +59,7 @@ const Orders = () => {
                   })}
               </h4>
               <h3 style={{ marginTop: "20px", marginBottom: "30px" }}>
-                <pre>{"sub total $ " + getTotal()}</pre>
+                <pre>{"sub total SAR " + getTotal()}</pre>
               </h3>
             </div>
             <div>

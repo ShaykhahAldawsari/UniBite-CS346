@@ -41,7 +41,7 @@ const Cafes = () => {
   return (
     <main>
       <header>
-        <Header />m
+        <Header />
       </header>
 
       {loading ? (

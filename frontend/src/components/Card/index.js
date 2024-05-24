@@ -10,12 +10,19 @@ const Card = ({ imageSrc, title, rating, location }) => {
       state: {
         title: title,
         location: location,
+        imageSrc: imageSrc,
       },
     });
   };
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{
+        width: "450px",
+        maxWidth: "450px",
+      }}
+    >
       <img src={imageSrc} alt={title} />
       <h2>{title}</h2>
       <p>
