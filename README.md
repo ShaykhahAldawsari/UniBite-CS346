@@ -27,6 +27,8 @@ here we draw our web pages flow chart:
 ## Tools
 * [Mongo atlas and mongo compass] 
 * [Node js environment]
+* [Firebase]
+* [Netlify]
 
 ## Frameworks and libraries:
 * [npm] 
