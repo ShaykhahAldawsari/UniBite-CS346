@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
 
 const Delivery = () => {
   const location = useLocation();
@@ -23,6 +24,9 @@ const Delivery = () => {
 
   return (
     <div className="body">
+      <header>
+        <Header />
+      </header>
       <div className="receipt">
         <h3 style={{ marginBottom: "40px" }}>Delivery</h3>
         <div style={{ marginBottom: "10px" }}>

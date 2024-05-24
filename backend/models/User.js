@@ -7,12 +7,12 @@ const userSchema = new mongoose.Schema({
   },
 
   email: {
-    type: Number,
+    type: String,
     default: "",
   },
 
   password: {
-    type: Number,
+    type: String,
     default: "",
   },
 });

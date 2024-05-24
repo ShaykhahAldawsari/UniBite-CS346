@@ -8,12 +8,27 @@ import OrderConfirmation from "../pages/OrderConfirmation";
 import Homepage from "../pages/Homepage";
 import Delivery from "../pages/Delivery";
 import Cafes from "../pages/Cafes";
+import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
+
+import { useAuthContext } from "../contexts/authContext";
 
 const AppRoutes = () => {
+  const { user } = useAuthContext();
+
   return (
     <BrowserRouter>
       <div className="m-4">
         <Routes>
+          <Route
+            path="/login"
+            element={!user ? <Login /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/sign-up"
+            element={!user ? <SignUp /> : <Navigate to="/" />}
+          />
+
           <Route path="/" element={<Cafes />} />
 
           <Route path="/orders" element={<Orders />} />

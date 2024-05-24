@@ -49,14 +49,14 @@ const login = async (req, res) => {
 
     if (!user) {
       return res.status(200).json({
-        status: "user-not-found",
+        status: "User not found",
         user: null,
       });
     }
 
-    if (user.password === password) {
+    if (user.password !== password) {
       return res.status(200).json({
-        status: "incorrect-password",
+        status: "Incorrect password",
         user: null,
       });
     }

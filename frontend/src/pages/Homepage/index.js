@@ -1,27 +1,63 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "../../restaurentModel.css";
 
 import burgers from "../../images/burdemo.png";
 import pancakes from "../../images/4053445_breakfast_hotcakes_kitchen_pancakes_restaurant_icon.png";
-import cupcake from "../../images/4053430_cupcake_dessert_food_gastronomy_sweet_icon.png";
 import pizza from "../../images/4053443_fast_food_gastronomy_pizza_restaurant_icon.png";
-import coffee from "../../images/4053443_fast_food_gastronomy_pizza_restaurant_icon.png";
+import drinks from "../../images/drinks.png";
 
 import OrderNowCard from "../../components/OrderNowCard";
+import Header from "../../components/Header";
 
 import useItems from "../../hooks/useItems";
 
 const Homepage = () => {
+  const location = useLocation();
+  const state = location.state;
+
   const { fetchItems } = useItems();
 
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+
+  const handleSearch = (query) => {
+    if (query == "") {
+      console.log("true");
+      setFilteredItems(items);
+      return;
+    }
+    const filteredItems = items.filter((item) =>
+      item?.itemname?.includes(query)
+    );
+    setFilteredItems(filteredItems);
+  };
+
+  const handleCategoryFilter = (query) => {
+    if (query == "") {
+      const filteredItems = items.filter((item) => true);
+      setFilteredItems(filteredItems);
+      return;
+    }
+    const filteredItems = items.filter((item) => item?.itemtype == query);
+    setFilteredItems(filteredItems);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetchItems();
       if (response) {
-        setItems(response);
+        if (!state) {
+          setItems(response);
+          setFilteredItems(response);
+        } else {
+          const filteredItems = response.filter(
+            (item) => item.name === state.title
+          );
+          setItems(filteredItems);
+          setFilteredItems(response);
+        }
       }
     };
 
@@ -30,12 +66,25 @@ const Homepage = () => {
 
   return (
     <div>
-      <header></header>
+      <header><Header /></header>
       <main>
         <section class="search-container">
-          <input type="search" placeholder=" Search" />
+          <input
+            type="search"
+            placeholder=" Search"
+            onChange={(e) => handleSearch(e.target.value)}
+          />
           <div class="categories">
-            <button>
+            <button onClick={() => handleCategoryFilter("")}>
+              <span
+                style={{
+                  color: "white",
+                }}
+              >
+                All
+              </span>
+            </button>
+            <button onClick={() => handleCategoryFilter("Dessert")}>
               <img
                 src={pancakes}
                 alt="restuarnt icon"
@@ -44,7 +93,7 @@ const Homepage = () => {
                 fill="currentColor"
               />
             </button>
-            <button>
+            <button onClick={() => handleCategoryFilter("Savory")}>
               <img
                 src={pizza}
                 alt="food icon"
@@ -53,17 +102,12 @@ const Homepage = () => {
                 fill="currentColor"
               />
             </button>
-            <button>
-              <img
-                src={cupcake}
-                alt="pizza icon"
-                width="25"
-                height="25"
-                fill="currentColor"
-              />
-            </button>
-            <button style={{ color: "#fffefe" }}>
-              <img src={coffee} alt="cup of coffe" width="25" height="25" />
+
+            <button
+              onClick={() => handleCategoryFilter("Drink")}
+              style={{ color: "#fffefe" }}
+            >
+              <img src={drinks} alt="cup of coffe" width="25" height="25" />
             </button>
           </div>
         </section>
@@ -74,8 +118,8 @@ const Homepage = () => {
         ) : (
           <div>
             <div className="main-menu">
-              {items &&
-                items.map((item) => {
+              {filteredItems &&
+                filteredItems.map((item) => {
                   return (
                     <OrderNowCard
                       itemPrice={item?.itemprice ?? ""}

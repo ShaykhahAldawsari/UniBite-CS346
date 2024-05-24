@@ -4,6 +4,7 @@ import Card from "../../components/Card";
 import unnamed from "../../images/unnamed.png";
 
 import useCafes from "../../hooks/uesCafes";
+import Header from "../../components/Header";
 
 const Cafes = () => {
   const { fetchItems } = useCafes();
@@ -26,6 +27,10 @@ const Cafes = () => {
 
   return (
     <main>
+      <header>
+        <Header />
+      </header>
+
       {loading ? (
         <>Loading...</>
       ) : (

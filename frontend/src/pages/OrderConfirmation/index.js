@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import "../../orderConfirmed.css";
 
 import gify from "../../images/giphy (2).gif";
+import Header from "../../components/Header";
 
 const OrderConfirmation = () => {
-  
   const navigate = useNavigate();
 
   return (
@@ -15,6 +15,9 @@ const OrderConfirmation = () => {
         height: "100%",
       }}
     >
+      <header>
+        <Header />
+      </header>
       <div className="receipt anim-typewriter">
         <h3
           style={{

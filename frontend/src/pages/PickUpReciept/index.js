@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import giphy from "../../images/giphy (2).gif";
 import applePay from "../../images/apple2.svg.png";
+import Header from "../../components/Header";
 
 const PickUpReciept = () => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const PickUpReciept = () => {
 
   return (
     <div className="body">
+      <header><Header /></header>
       <div className="receipt anim-typewriter">
         <h3 style={{ marginBottom: "40px" }}>Receipt</h3>
         <img

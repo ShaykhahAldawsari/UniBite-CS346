@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import applePay from "../../images/apple2.svg.png";
+import Header from "../../components/Header";
 
 const Reciept = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Reciept = () => {
 
   return (
     <div className="body">
+      <header><Header /></header>
       <div className="receipt anim-typewriter">
         <h3 style={{ marginBottom: "40px" }}>Receipt</h3>
         <div style={{ marginBottom: "10px" }}>

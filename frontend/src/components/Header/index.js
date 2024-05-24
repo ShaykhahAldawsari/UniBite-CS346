@@ -1,62 +1,57 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import Unobites from "../../images/UNIBITES LOGO.png";
+import { useAuthContext } from "../../contexts/authContext";
 
 const Header = () => {
-  return (
-    <header className="header">
-      <nav className="zone first">
-        <ul className="main-nav">
-          <li>
-            <a href="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-list"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                />
-              </svg>
-            </a>
-          </li>
+  const { user, logout } = useAuthContext();
+  const navigate = useNavigate();
 
-          <li>
-            <a>
-              <img
-                style={{
-                  marginLeft: "14em",
-                  marginTop: "0.5em",
-                  marginBottom: "0.5em",
-                }}
-                src={Unobites}
-                alt="UNIBITES logo"
-                height="50"
-                width="40"
-              />
+  return (
+    <div>
+      <nav
+        style={{
+          borderRadius: "12px",
+          padding: "12px",
+        }}
+        className="navbar navbar-expand-lg navbar-light bg-light"
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+          className="collapse navbar-collapse"
+          id="navbarTogglerDemo01"
+        >
+          <div>
+            <a className="navbar-brand" href="#">
+              Unibite
             </a>
-          </li>
-          <li class="push">
-            <a href="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-bag-fill"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              margin: "0 15px",
+            }}
+          >
+            {user && (
+              <h4 style={{ marginRight: "12px" }}>
+                {"Welcome,  " + user?.fullName}
+              </h4>
+            )}
+            <button
+              onClick={user ? logout : () => navigate("/login")}
+              className="btn btn-outline-primary my-2 my-sm-0"
+              type="submit"
+            >
+              {user ? "Logout" : "Login"}
+            </button>
+          </div>
+        </div>
       </nav>
-    </header>
+    </div>
   );
 };
 

@@ -7,6 +7,8 @@ const { MONGODB_URI } = require("./constants/database");
 
 const app = express();
 
+app.use(express.json());
+
 const allowedOrigins = ["http://localhost:3000", "*"];
 
 app.use(
