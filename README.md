@@ -2,7 +2,7 @@
 # Web Development Project!![UNIBITES LOGO](https://github.com/ShaykhahAldawsari/UniBite-CS346/assets/124717337/30d5d05d-a31b-4d53-8e3f-0b353f705f2d)
 
 
-#UNIBITE :
+##UNIBITE :
 An online platform that allows female students at Imam
 University to explore the university's cafés with comprehensive
 information and a virtual tour of each café's interior. We provide
@@ -40,6 +40,10 @@ here we draw our web pages flow chart:
 * https://www.iconfinder.com/icons/285651/search_icon
 * https://icons.getbootstrap.com/
 * https://fontawesome.com/v5/icons/apple-pay?f=brands&s=solid&pc=%23ffffff
+* FREEPIK: https://www.freepik.com/
+* CLEANPNG: https://www.cleanpng.com/
+* PNGTREE: https://pngtree.com/
+
 
 ## Presentation of our work
 * [https://www.canva.com/design/DAGFxwk7hTg/nrcw2lH_95ZbSwxgZp8DfQ/view?utm_content=DAGFxwk7hTg&utm_campaign=designshare&utm_medium=link&utm_source=editor] 
