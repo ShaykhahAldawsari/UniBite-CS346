@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import logo from "../../images/UNIBITES LOGO.png"
+
 import { useAuthContext } from "../../contexts/authContext";
 
 const Header = () => {
@@ -25,9 +27,13 @@ const Header = () => {
           id="navbarTogglerDemo01"
         >
           <div>
-            <a className="navbar-brand" href="#">
-              Unibite
-            </a>
+            <div onClick={()=>{navigate("/")}} className="navbar-brand" >
+              Unibites
+            </div>
+          </div>
+
+          <div>
+            <img src={logo} height={65} width={65} />
           </div>
 
           <div

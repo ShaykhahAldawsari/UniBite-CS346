@@ -11,6 +11,7 @@ const Cafes = () => {
 
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
+  const [tempItems, setTempItems] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +19,7 @@ const Cafes = () => {
       const response = await fetchItems();
       if (response) {
         setItems(response);
+        setTempItems(response);
       }
       setLoading(false);
     };
@@ -25,26 +27,47 @@ const Cafes = () => {
     fetchData();
   }, []);
 
+  const handleSearch = (query) => {
+    if (query == "") {
+      setItems(tempItems);
+      return;
+    }
+    const filteredItems = tempItems.filter((item) =>
+      item?.cafename?.includes(query)
+    );
+    setItems(filteredItems);
+  };
+
   return (
     <main>
       <header>
-        <Header />
+        <Header />m
       </header>
 
       {loading ? (
         <>Loading...</>
       ) : (
-        <section className="cards-container">
-          {items &&
-            items.length > 0 &&
-            items.map((cafe) => (
-              <Card
-                imageSrc={cafe?.cafeimg ?? unnamed}
-                title={cafe?.cafename ?? "N/A"}
-                rating="5.0"
-              />
-            ))}
-        </section>
+        <div>
+          <section class="search-container">
+            <input
+              type="search"
+              placeholder=" Search"
+              onChange={(e) => handleSearch(e.target.value)}
+            />
+          </section>
+          <section className="cards-container">
+            {items &&
+              items.length > 0 &&
+              items.map((cafe) => (
+                <Card
+                  imageSrc={cafe?.cafeimg ?? unnamed}
+                  title={cafe?.cafename ?? "N/A"}
+                  rating="5.0"
+                  location={cafe?.cafelocation ?? ""}
+                />
+              ))}
+          </section>
+        </div>
       )}
     </main>
   );

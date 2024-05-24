@@ -9,6 +9,7 @@ const Card = ({ imageSrc, title, rating, location }) => {
     navigate("/menus", {
       state: {
         title: title,
+        location: location,
       },
     });
   };

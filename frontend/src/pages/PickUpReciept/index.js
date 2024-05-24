@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
-import giphy from "../../images/giphy (2).gif";
 import applePay from "../../images/apple2.svg.png";
 import Header from "../../components/Header";
 
@@ -22,15 +21,12 @@ const PickUpReciept = () => {
 
   return (
     <div className="body">
-      <header><Header /></header>
+      <header>
+        <Header />
+      </header>
       <div className="receipt anim-typewriter">
         <h3 style={{ marginBottom: "40px" }}>Receipt</h3>
-        <img
-          src={giphy}
-          alt="GIF eats his phone"
-          width="120px"
-          style={{ marginLeft: "120px" }}
-        />
+
         <div style={{ marginBottom: "10px" }}>
           {items &&
             items.length > 0 &&
@@ -58,15 +54,28 @@ const PickUpReciept = () => {
             </pre>
           </p>
         </div>
-        <div>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
           <button
             onClick={() => {
               navigate("/order-confirmation");
             }}
             className="btn btn-info"
-            style={{ marginLeft: "100px", width: "150px" }}
+            style={{ marginLeft: "30px", width: "150px" }}
           >
             <img src={applePay} alt="apple-pay" width="60px" />
+          </button>
+          <button
+            onClick={() => {
+              window.print();
+            }}
+            className="btn btn-info"
+            style={{ marginLeft: "30px", width: "150px" }}
+          >
+            Print
           </button>
         </div>
       </div>

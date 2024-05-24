@@ -20,7 +20,9 @@ const Reciept = () => {
 
   return (
     <div className="body">
-      <header><Header /></header>
+      <header>
+        <Header />
+      </header>
       <div className="receipt anim-typewriter">
         <h3 style={{ marginBottom: "40px" }}>Receipt</h3>
         <div style={{ marginBottom: "10px" }}>
@@ -59,19 +61,35 @@ const Reciept = () => {
                     type="button"
                     className="btn btn-info"
                     value="Contact Driver"
-                    style={{ width: "150px" }}
+                    style={{ width: "120px", fontSize: "14px" }}
                   />
                 </td>
                 <td>
-                  <button
-                    onClick={() => {
-                      navigate("/order-confirmation");
+                  <div
+                    style={{
+                      display: " flex",
                     }}
-                    className="btn btn-info"
-                    style={{ marginLeft: "40px", width: "150px" }}
                   >
-                    <img src={applePay} alt="apple-pay" width="60px" />
-                  </button>
+                    <button
+                      onClick={() => {
+                        navigate("/order-confirmation");
+                      }}
+                      className="btn btn-info"
+                      style={{ marginLeft: "20px", width: "120px" }}
+                    >
+                      <img src={applePay} alt="apple-pay" width="60px" />
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        window.print();
+                      }}
+                      className="btn btn-info"
+                      style={{ marginLeft: "20px", width: "80px" }}
+                    >
+                      Print
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>

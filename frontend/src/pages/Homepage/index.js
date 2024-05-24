@@ -66,7 +66,9 @@ const Homepage = () => {
 
   return (
     <div>
-      <header><Header /></header>
+      <header>
+        <Header />
+      </header>
       <main>
         <section class="search-container">
           <input
@@ -108,6 +110,16 @@ const Homepage = () => {
               style={{ color: "#fffefe" }}
             >
               <img src={drinks} alt="cup of coffe" width="25" height="25" />
+            </button>
+
+            <button onClick={() => window.open(state?.location)}>
+              <span
+                style={{
+                  color: "white",
+                }}
+              >
+                Location
+              </span>
             </button>
           </div>
         </section>
