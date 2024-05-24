@@ -27,6 +27,8 @@ app.use("/auth", require("./routes/authRoutes"));
 
 app.use("/items", require("./routes/menuRoutes"));
 
+app.use("/cafes", require("./routes/cafeRoutes"));
+
 mongoose.connect(MONGODB_URI, {}).then(() => {
   console.log("Connected to MongoDB");
 });
