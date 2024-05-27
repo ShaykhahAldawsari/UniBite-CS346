@@ -15,7 +15,7 @@ cafés.
 
 ## Flow Chart
 here we draw our web pages flow chart:
-  https://lucid.app/lucidchart/d3cd8da4-f971-42b2-8a24-46e43d699830/edit?viewport_loc=-238%2C452%2C2768%2C1617%2C0_0&invitationId=inv_e6172419-595a-49d7-bc7e-f5ecccd26b77
+![Algorithm flowchart example-2](https://github.com/ShaykhahAldawsari/UniBite-CS346/assets/124717337/4f11a39e-418d-4082-aef0-f75305c8fade)
 
 
 ## Built With
